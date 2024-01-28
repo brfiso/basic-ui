@@ -10,7 +10,6 @@ const handler = NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        console.log(credentials);
 
         if (credentials?.username === "f8bruno@outlook.com") {
           return {
