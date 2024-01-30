@@ -1,5 +1,5 @@
 'use client';
-import { AppShell, Burger } from "@mantine/core";
+import { AppShell, Box, Burger } from "@mantine/core";
 import Header from "../ui/header";
 import Sidebar from "../ui/sidebar";
 import { useDisclosure } from "@mantine/hooks";
@@ -33,14 +33,9 @@ export default function LayoutDashboard({ children }: Readonly<{
                 padding="md"
             >
                 <AppShell.Header>
-                    <Burger
-                        opened={opened}
-                        onClick={toggle}
-                        hiddenFrom="sm"
-                        size="sm"
-                    />
-
-                    <Header />
+                    <Box>
+                        <Header opened={opened} toggle={toggle} />
+                    </Box>
                 </AppShell.Header>
 
                 <AppShell.Navbar p="md">
